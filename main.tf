@@ -54,7 +54,7 @@ resource "azurerm_network_interface" "vm_nic" {
 
   ip_configuration {
     name                          = "ipconfig1"
-    subnet_id                     = module.avm-res-network-virtualnetwork.subnets["subnet1"].id
+    subnet_id                     = module.avm-res-network-virtualnetwork.subnets.subnet1.resource_id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.vm_pip.id
   }
