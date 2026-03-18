@@ -62,7 +62,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                  = "vm-CR460-yassine"
   resource_group_name   = azurerm_resource_group.rg.name
   location              = azurerm_resource_group.rg.location
-  size                  = "Standard_D2_v2"
+  size                  = "Standard_D2as_v7"
   admin_username        = "yassineAdmin"
   network_interface_ids = [azurerm_network_interface.vm_nic.id]
 
@@ -79,7 +79,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
+    sku       = "22_04-lts-gen2"
     version   = "latest"
   }
 
