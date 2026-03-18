@@ -59,7 +59,7 @@ resource "azurerm_network_interface" "vm_nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                  = "vm-cr460-yassine"
+  name                  = "vm-CR460-yassine"
   resource_group_name   = azurerm_resource_group.rg.name
   location              = azurerm_resource_group.rg.location
   size                  = "Standard_D2_v2"
