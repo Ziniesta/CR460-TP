@@ -75,7 +75,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   size                = "Standard_B1s"
 
   admin_username = "yassineAdmin"
-  
+
   network_interface_ids = [azurerm_network_interface.vm_nic.id]
 
   admin_ssh_key {
