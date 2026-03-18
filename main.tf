@@ -19,7 +19,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "rg-cr460-yassine"
-  location = "canadacentral"
+  location = "eastus"
   tags = {
     environment = "TPcr460"
   }
