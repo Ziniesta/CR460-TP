@@ -19,7 +19,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "rg-cr460-yassine"
-  location = "eastus"
+  location = "eastus2"
   tags = {
     environment = "TPcr460"
   }
@@ -62,7 +62,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                  = "vm-cr460-yassine"
   resource_group_name   = azurerm_resource_group.rg.name
   location              = azurerm_resource_group.rg.location
-  size                  = "Standard_DS1_v2"
+  size                  = "Standard_D2_v2"
   admin_username        = "yassineAdmin"
   network_interface_ids = [azurerm_network_interface.vm_nic.id]
 
