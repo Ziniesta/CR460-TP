@@ -87,3 +87,27 @@ resource "azurerm_linux_virtual_machine" "vm" {
     environment = "TPcr460"
   }
 }
+
+resource "azurerm_container_group" "container" {
+  name                = "aci-cr460-yassine"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  ip_address_type     = "Public"
+  os_type             = "Linux"
+
+  container {
+    name   = "CR460-Container-Yassine"
+    image  = "nginx:latest"
+    cpu    = "0.5"
+    memory = "1"
+
+    ports {
+      port     = 80
+      protocol = "TCP"
+    }
+  }
+
+  tags = {
+    environment = "TPcr460"
+  }
+}
