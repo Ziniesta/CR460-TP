@@ -96,7 +96,7 @@ resource "azurerm_container_group" "container" {
   os_type             = "Linux"
 
   container {
-    name   = "CR460-Container-Yassine"
+    name   = "cr460-container-yassine"
     image  = "nginx:latest"
     cpu    = "0.5"
     memory = "1"
